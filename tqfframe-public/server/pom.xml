@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.tqfframe</groupId>
+    <artifactId>server</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <!--<packaging>pom</packaging>-->
+
+    <description>包管理服务,统一版本升级服务</description>
+
+    <properties>
+        <spring.boot.main.version>2.0.3.RELEASE</spring.boot.main.version>
+        <spring.cloud.main.version>Finchley.RELEASE</spring.cloud.main.version>
+    </properties>
+
+    <!-- 只是对版本号进行管理，不会实际引入jar-->
+    <dependencyManagement>
+        <dependencies>
+            <!--springCloud包管理-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud.main.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--springBoot包管理-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-parent</artifactId>
+                <version>${spring.boot.main.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-tomcat</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>
