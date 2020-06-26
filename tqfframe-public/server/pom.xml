@@ -7,7 +7,8 @@
     <groupId>com.tqfframe</groupId>
     <artifactId>server</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <!--<packaging>pom</packaging>-->
+     <!--  父类必须时pom，不然不能打包-->
+    <packaging>pom</packaging>
 
     <description>包管理服务,统一版本升级服务</description>
 
