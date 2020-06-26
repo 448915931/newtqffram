@@ -1,6 +1,6 @@
 FROM java:8
 VOLUME /tmp
-ADD tqfframe-zuul-0.0.1-SNAPSHOT.jar app.jar
+ADD tqfframe-zuul-1.0-SNAPSHOT.jar app.jar
 # EXPOSE 8080
 # 运行jar包
 RUN bash -c 'touch /app.jar'
