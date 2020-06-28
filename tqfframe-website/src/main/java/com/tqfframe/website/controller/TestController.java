@@ -23,6 +23,7 @@ public class TestController {
      */
     @GetMapping(value = "/testhystrix/{name}")
     public String testhystrix(@PathVariable(name = "name") String name){
+        System.out.println(name);
         return name;
     }
 }
