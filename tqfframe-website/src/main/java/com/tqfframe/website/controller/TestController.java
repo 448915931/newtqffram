@@ -18,11 +18,11 @@ public class TestController {
 
     /**
      *  本地
-     *  http://localhost:8080/api/webiste/testhystrix/11111
+     *  http://localhost:8080/api/website/testhystrix/11111
      *  http://localhost:9001/testhystrix/11111
      *
      *  docker
-     *  http://192.168.47.135:8080/api/webiste/testhystrix/11111
+     *  http://192.168.47.135:8080/api/website/testhystrix/11111
      *  http://192.168.47.135:9001/testhystrix/11111
      *
      * @param name
