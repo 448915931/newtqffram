@@ -1,15 +1,11 @@
 server:
   port: 9002
 
-spring:
-  application:
-    name: tqfframe-config
-
 #注册进服务中心
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://172.17.0.2:9003/eureka/
+      defaultZone: http://localhost:9003/eureka/
 #显示版本号信息，服务器ip地址和端口
   instance:
     prefer-ip-address: true
@@ -20,7 +16,7 @@ eureka:
 
 spring:
     application:
-        name: config
+        name: tqfframe-config
     cloud:
         config:
             label: master
@@ -30,5 +26,5 @@ spring:
 #                    searchPaths: product
                     searchPaths: test
                     #使用远程git仓库的配置文件
-                    uri: http://gitlab.xwkj.local/zeno-java/zeno-config-yaml.git
+                    uri: https://gitee.com/tangqifengaa/tqfframe/tqfframe-config-yaml.git
                     username: 448915931@qq.com

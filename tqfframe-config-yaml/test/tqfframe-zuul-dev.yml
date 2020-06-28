@@ -4,19 +4,6 @@ spring:
   application:
     name: tqfframe-zuul
 
-#注册进服务中心
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:9003/eureka/
-#显示版本号信息，服务器ip地址和端口
-  instance:
-    prefer-ip-address: true
-    hostname: ${spring.cloud.client.ip-address}
-    instance-id: ${spring.cloud.client.ip-address}:${server.port}
-    lease-renewal-interval-in-seconds: 1
-    lease-expiration-duration-in-seconds: 2
-
 zuul:
   #prefix是包含/api经过下面路由则进行
   prefix: /api
