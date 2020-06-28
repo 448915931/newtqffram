@@ -152,7 +152,8 @@
     <logger name="org.elasticsearch" level="WARN"/>
     <logger name="org.mongodb" level="WARN"/>
 
-
+    <!--将上面的配置应用于整个项目，且默认日志级别设置为最低打印INFO-->
+    <!--建议设置为INFO-->
     <root level="INFO">
         <appender-ref ref="CONSOLE"/>
         <appender-ref ref="TRACE_FILE_ASYNC"/>
