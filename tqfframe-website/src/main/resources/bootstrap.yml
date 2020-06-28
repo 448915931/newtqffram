@@ -17,7 +17,7 @@ spring:
        zuul:
           enabled: true
     application:
-      name: tqfframe-zuul
+      name: tqfframe-website
     cloud:
         config:
             name: application,${spring.application.name}
