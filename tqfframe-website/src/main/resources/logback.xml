@@ -2,8 +2,6 @@
 <configuration scan="true" scanPeriod="60 seconds">
     <springProperty scope="context" name="appName" source="management.metrics.tags.appName"
                     defaultValue="appName"/>
-    <!-- 获取yml中的logging参数 -->
-    <springProperty scope="context" name="websitelogLevel" source="logging.websitelogLevel" defaultValue="ERROR"/>
     <!--定义日志文件的存储地址-->
     <property name="log.path" value="/var/nrsc/log/logger"/>
     <!--设置控制台日志输出格式-->
@@ -67,6 +65,4 @@
         <appender-ref ref="fileInfoLog"/>
         <appender-ref ref="fileErrorLog"/>
     </root>
-    <!--com.tqfframe.website目录下所有包日志打印级别最低为debug-->
-    <logger name="com.tqfframe.website" level="${websitelogLevel}"/>
 </configuration>
