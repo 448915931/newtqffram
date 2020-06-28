@@ -3,7 +3,7 @@
     <!-- 获取yml中的logging参数 -->
     <springProperty scop="context" name="websitelogLevel" source="logging.websitelogLevel"/>
     <!--引入自己写的loggin日志依赖-->
-    <include resource="com/tqfframe/logging/default.xmll"/>
+    <include resource="com/tqfframe/logging/logback/default.xml"/>
     <!--使用yml自定义目录级别，但是这个自定义级别还是要受上面root的限制。-->
     <!--比如root级别为info，那么下面设置为debug也不会打印debug日志-->
     <!--如下时定义com.tqfframe.website的日志级别最低为info-->
