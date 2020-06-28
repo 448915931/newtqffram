@@ -10,10 +10,4 @@
     <!-- 被其他包直接引用，需要使用jar-->
     <packaging>jar</packaging>
 
-    <parent>
-        <artifactId>server</artifactId>
-        <groupId>com.tqfframe</groupId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
-
 </project>

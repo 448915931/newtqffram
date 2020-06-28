@@ -4,7 +4,7 @@ package com.tqfframe.test;
  * Created by Tang-QiFeng on 2020/6/28
  */
 
-import com.tqfframe.user.WebApplicationApp;
+import com.tqfframe.user.UserApplicationApp;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.ArrayList;
 import java.util.List;
 
-@SpringBootTest(classes = WebApplicationApp.class)
+@SpringBootTest(classes = UserApplicationApp.class)
 @RunWith(SpringRunner.class)
 public class TestSql {
 

@@ -14,6 +14,8 @@
 
     <properties>
         <spring.boot.main.version>2.0.3.RELEASE</spring.boot.main.version>
+        <mysql.version>8.0.11</mysql.version>
+        <mybatis.plus.baomidou.version>3.0.5</mybatis.plus.baomidou.version>
         <spring.cloud.main.version>Finchley.RELEASE</spring.cloud.main.version>
     </properties>
 
@@ -45,6 +47,18 @@
                         <artifactId>mysql-connector-java</artifactId>
                     </exclusion>
                 </exclusions>
+            </dependency>
+            <!--mysql-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <!--mybatis-plus-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis.plus.baomidou.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

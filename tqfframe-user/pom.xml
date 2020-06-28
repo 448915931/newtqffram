@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.tqfframe</groupId>
-    <artifactId>tqfframe-website</artifactId>
+    <artifactId>tqfframe-user</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <description>web官网服务</description>
+    <description>全平台用户服务</description>
 
     <parent>
         <artifactId>server</artifactId>
@@ -74,7 +74,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>com.tqfframe.user.WebApplicationApp</mainClass>
+                    <mainClass>com.tqfframe.user.UserApplicationApp</mainClass>
                 </configuration>
             </plugin>
             <plugin>

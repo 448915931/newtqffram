@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.generator.config.PackageConfig;
 import com.baomidou.mybatisplus.generator.config.StrategyConfig;
 import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
-import com.tqfframe.user.WebApplicationApp;
+import com.tqfframe.user.UserApplicationApp;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -18,7 +18,7 @@ import org.junit.Test;
 /**
  * Created by Tang-QiFeng on 2020/6/28
  */
-@SpringBootTest(classes = WebApplicationApp.class)
+@SpringBootTest(classes = UserApplicationApp.class)
 @RunWith(SpringRunner.class)
 public class CodeGenerator {
 
