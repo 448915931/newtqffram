@@ -1,8 +1,5 @@
 server:
   port: 8080
-#  servlet: //项目根目录
-#    context-path: /api
-
 spring:
   application:
     name: tqfframe-zuul
@@ -27,18 +24,9 @@ zuul:
   #后端的位置可以被指定为“serviceId”（对于来自发现的服务customer-service是客户端的application名）或“url”（对于物理位置）。
   #使用serviceId方式用来发现多个相同服务实例来实现负载均衡，所以尽量使用serviceId而不是url
   routes:
-#    fristurl:
-#      path: /fristurl/**
-#      url: http://localhost:9098 #客户端接口地址
 #    authcenterurl:
 #      path: /authcenterurl/**
 #      serviceId: auth-center        #jwt认证中心登录
-#    adminurl:
-#      path: /adminurl/**
-#      serviceId: tqf-admin          #服务提供端
-#    phoneurl:
-#      path: /phoneurl/**
-#      serviceId: tqf-phoneserver    #图片服务器接口
     webiste:
       path: /webiste/**
       serviceId: tqfframe-website            #用于提供web服务的接口，消费端

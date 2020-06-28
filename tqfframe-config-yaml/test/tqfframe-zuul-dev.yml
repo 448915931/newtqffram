@@ -1,0 +1,42 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: tqfframe-zuul
+
+#注册进服务中心
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://loclhost:9003/eureka/
+#显示版本号信息，服务器ip地址和端口
+  instance:
+    prefer-ip-address: true
+    hostname: ${spring.cloud.client.ip-address}
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+
+zuul:
+  #prefix是包含/api经过下面路由则进行
+  prefix: /api
+  #routes下面的参数为自己自定义的，比如test和 customer-by-address等
+  #后端的位置可以被指定为“serviceId”（对于来自发现的服务customer-service是客户端的application名）或“url”（对于物理位置）。
+  #使用serviceId方式用来发现多个相同服务实例来实现负载均衡，所以尽量使用serviceId而不是url
+  routes:
+#    authcenterurl:
+#      path: /authcenterurl/**
+#      serviceId: auth-center        #jwt认证中心登录
+    webiste:
+      path: /webiste/**
+      serviceId: tqfframe-website            #用于提供web服务的接口，消费端
+#    static:
+#      path: /static/**               #静态文件
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 60000
+
+
+
+
+

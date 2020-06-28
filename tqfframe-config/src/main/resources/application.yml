@@ -1,0 +1,34 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: tqfframe-config
+
+#注册进服务中心
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://172.17.0.2:9003/eureka/
+#显示版本号信息，服务器ip地址和端口
+  instance:
+    prefer-ip-address: true
+    hostname: ${spring.cloud.client.ip-address}
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+
+spring:
+    application:
+        name: config
+    cloud:
+        config:
+            label: master
+            server:
+                git:
+                    password: tang4810291
+#                    searchPaths: product
+                    searchPaths: test
+                    #使用远程git仓库的配置文件
+                    uri: http://gitlab.xwkj.local/zeno-java/zeno-config-yaml.git
+                    username: 448915931@qq.com

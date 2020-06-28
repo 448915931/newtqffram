@@ -1,0 +1,21 @@
+spring:
+    sleuth:
+       zuul:
+          enabled: true
+    application:
+      name: tqfframe-zuul
+    cloud:
+        config:
+            name: application,${spring.application.name}
+            fail-fast: true
+            profile: dev
+            label: master
+            retry:
+                initial-interval: 2000
+                max-interval: 10000
+                multiplier: 2
+                max-attempts: 10
+            enabled: true
+            discovery:
+                enabled: true
+                service-id: config
