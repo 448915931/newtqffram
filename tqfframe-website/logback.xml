@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds">
+    <!-- 获取yml中的logging参数 -->
+    <springProperty scope="context" name="websitelogLevel" source="logging.websitelogLevel" defaultValue="ERROR"/>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <!--com.zeno.service.element目录下所有包日志打印级别为debug-->
+    <logger name="com.zeno.service.element" level="${websitelogLevel}"/>
+</configuration>

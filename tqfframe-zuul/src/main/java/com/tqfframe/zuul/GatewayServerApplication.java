@@ -14,9 +14,6 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 public class GatewayServerApplication {
     public static void main( String[] args )
     {
-        System.out.println("3333");
-        System.out.println("1111111111");
-        System.out.println("2222");
         SpringApplication.run(GatewayServerApplication.class, args);
     }
 }

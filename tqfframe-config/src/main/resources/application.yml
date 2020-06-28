@@ -5,6 +5,7 @@ server:
 eureka:
   client:
     serviceUrl:
+#      defaultZone: http://172.17.0.2:9003/eureka/
       defaultZone: http://localhost:9003/eureka/
 #显示版本号信息，服务器ip地址和端口
   instance:
@@ -23,8 +24,10 @@ spring:
             server:
                 git:
                     password: tang4810291
-#                    searchPaths: product
-                    searchPaths: test
+                    # tqfframe-config-yaml/test表示
+                    # https://github.com/448915931/newtqffram/tqfframe-config-yaml/test
+#                    searchPaths: tqfframe-config-yaml/product
+                    searchPaths: tqfframe-config-yaml/test
                     #使用远程git仓库的配置文件
-                    uri: https://gitee.com/tangqifengaa/tqfframe/tqfframe-config-yaml.git
-                    username: 448915931@qq.com
+                    uri: https://github.com/448915931/newtqffram.git
+                    username: 448915931
