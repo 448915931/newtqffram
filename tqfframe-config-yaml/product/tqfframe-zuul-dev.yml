@@ -17,9 +17,9 @@ zuul:
     user:
       path: /user/**
       serviceId: tqfframe-user               #用于提供user服务的接口，消费端
-    webiste:
-      path: /webiste/**
-      serviceId: tqfframe-webiste            #用于提供web服务的接口，消费端
+    website:
+      path: /website/**
+      serviceId: tqfframe-website            #用于提供web服务的接口，消费端
 #    static:
 #      path: /static/**               #静态文件
   host:
