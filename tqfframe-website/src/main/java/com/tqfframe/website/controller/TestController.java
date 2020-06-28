@@ -34,7 +34,6 @@ public class TestController {
         logger.debug(name);
         logger.error(name);
         //调用user服务接口
-        userClient.testhystrix(name);
-        return name;
+        return  userClient.testhystrix(name);
     }
 }
