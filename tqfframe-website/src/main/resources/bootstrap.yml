@@ -35,6 +35,3 @@ spring:
                 ##这个一定要填对
                 service-id: tqfframe-config
 
-#日志级别
-logging:
-  websitelogLevel: INFO

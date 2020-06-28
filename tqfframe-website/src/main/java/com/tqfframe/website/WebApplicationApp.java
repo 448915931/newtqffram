@@ -12,7 +12,6 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @EnableEurekaClient
 //@EnableFeignClients
 @SpringBootApplication
-//@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 public class WebApplicationApp
 {
     public static void main( String[] args )
