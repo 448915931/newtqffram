@@ -35,3 +35,8 @@ spring:
                 ##这个一定要填对
                 service-id: tqfframe-config
 
+#日志级别
+logging:
+  level:
+  # 设置 ccom.tqfframe.website  目录的日志打印级别最低为info
+    ccom.tqfframe.website: info

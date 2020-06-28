@@ -5,8 +5,8 @@ spring:
     name: tqfframe-website
 
 
-#日志级别
-logging:
-  level:
-  # 设置 ccom.tqfframe.website  目录的日志打印级别最低为debug
-    ccom.tqfframe.website: debug
+##日志级别
+#logging:
+#  level:
+#  # 设置 ccom.tqfframe.website  目录的日志打印级别最低为debug
+#    ccom.tqfframe.website: debug

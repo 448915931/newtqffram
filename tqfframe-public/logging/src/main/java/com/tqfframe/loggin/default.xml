@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration scan="true" scanPeriod="60 seconds">
+<included>
     <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
     <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+    <jmxConfigurator/>
     <springProperty scop="context" name="logFilePrefix" source="spring.application.name"/>
+    <!--文件输出路径-->
     <property name="LOG_HOME" value="/etc/logs/zeno/"/>
+    <!--文件名-->
     <property name="LOG_PREFIX" value="${logFilePrefix}"/>
 
 
@@ -132,17 +135,7 @@
         <appender-ref ref="ERROR_FILE"/>
     </appender>
 
-    <!--将上面的配置应用于整个项目，且默认日志级别设置为DEBUG-->
-    <root level="DEBUG">
-        <appender-ref ref="CONSOLE"/>
-        <appender-ref ref="TRACE_FILE_ASYNC"/>
-        <appender-ref ref="DEBUG_FILE_ASYNC"/>
-        <appender-ref ref="INFO_FILE_ASYNC"/>
-        <appender-ref ref="WARN_FILE_ASYNC"/>
-        <appender-ref ref="ERROR_FILE_ASYNC"/>
-    </root>
 
-    <!--因为上面设置项目最低级别为debug，这个时候会有很多不需要展示的debug级别的日志会一直打印，需要全部设置日志级别-->
     <logger name="org.apache" level="WARN"/>
     <logger name="org.hibernate" level="WARN"/>
     <logger name="io.undertow" level="WARN"/>
@@ -158,4 +151,14 @@
     <logger name="com.ulisesbocchio" level="WARN"/>
     <logger name="org.elasticsearch" level="WARN"/>
     <logger name="org.mongodb" level="WARN"/>
-</configuration>
+
+
+    <root level="DEBUG">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="TRACE_FILE_ASYNC"/>
+        <appender-ref ref="DEBUG_FILE_ASYNC"/>
+        <appender-ref ref="INFO_FILE_ASYNC"/>
+        <appender-ref ref="WARN_FILE_ASYNC"/>
+        <appender-ref ref="ERROR_FILE_ASYNC"/>
+    </root>
+</included>
