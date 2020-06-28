@@ -34,3 +34,4 @@ spring:
                 enabled: true
                 ##这个一定要填对
                 service-id: tqfframe-config
+
