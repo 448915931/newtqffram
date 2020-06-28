@@ -9,7 +9,6 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  *
  */
 @EnableEurekaClient
-//@EnableFeignClients
 @SpringBootApplication
 public class UserApplicationApp
 {
