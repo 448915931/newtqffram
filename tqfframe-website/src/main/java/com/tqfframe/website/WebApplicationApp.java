@@ -1,4 +1,4 @@
-package com.tqfframe.user;
+package com.tqfframe.website;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

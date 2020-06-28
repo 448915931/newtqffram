@@ -1,5 +1,5 @@
-package com.tqfframe.user.controller;
-import com.tqfframe.user.client.UserClient;
+package com.tqfframe.website.controller;
+import com.tqfframe.website.client.UserClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

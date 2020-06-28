@@ -1,4 +1,4 @@
-package com.tqfframe.user.client;
+package com.tqfframe.website.client;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

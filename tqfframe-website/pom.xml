@@ -74,7 +74,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>com.tqfframe.user.WebApplicationApp</mainClass>
+                    <mainClass>com.tqfframe.website.WebApplicationApp</mainClass>
                 </configuration>
             </plugin>
             <plugin>

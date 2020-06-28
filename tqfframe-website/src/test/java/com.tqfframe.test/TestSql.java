@@ -4,7 +4,7 @@ package com.tqfframe.test;
  * Created by Tang-QiFeng on 2020/6/28
  */
 
-import com.tqfframe.user.WebApplicationApp;
+import com.tqfframe.website.WebApplicationApp;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
