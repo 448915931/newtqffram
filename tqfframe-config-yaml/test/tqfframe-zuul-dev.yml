@@ -14,9 +14,12 @@ zuul:
 #    authcenterurl:
 #      path: /authcenterurl/**
 #      serviceId: auth-center        #jwt认证中心登录
+    user:
+      path: /user/**
+      serviceId: tqfframe-user               #用于提供user服务的接口，消费端
     webiste:
       path: /webiste/**
-      serviceId: tqfframe-user            #用于提供web服务的接口，消费端
+      serviceId: tqfframe-webiste            #用于提供web服务的接口，消费端
 #    static:
 #      path: /static/**               #静态文件
   host:
