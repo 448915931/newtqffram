@@ -16,6 +16,8 @@
         <spring.boot.main.version>2.0.3.RELEASE</spring.boot.main.version>
         <mysql.version>8.0.11</mysql.version>
         <mybatis.plus.baomidou.version>3.0.5</mybatis.plus.baomidou.version>
+        <com.alibaba.fastjson.version>1.2.47</com.alibaba.fastjson.version>
+        <netty.version>4.1.1.Final</netty.version>
         <spring.cloud.main.version>Finchley.RELEASE</spring.cloud.main.version>
     </properties>
 
@@ -59,6 +61,17 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis.plus.baomidou.version}</version>
+            </dependency>
+            <!--netty-->
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${com.alibaba.fastjson.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
