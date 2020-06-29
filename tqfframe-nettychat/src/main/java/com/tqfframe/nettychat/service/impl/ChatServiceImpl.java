@@ -25,7 +25,8 @@ public class ChatServiceImpl implements ChatService {
             
     @Autowired
     private GroupInfoDao groupDao;
-    
+
+    //把ChannelHandlerContext放入Constant.onlineUserMap中
     @Override
     public void register(JSONObject param, ChannelHandlerContext ctx) {
         String userId = (String)param.get("userId");
@@ -37,7 +38,7 @@ public class ChatServiceImpl implements ChatService {
         LOGGER.info(MessageFormat.format("userId为 {0} 的用户登记到在线用户表，当前在线人数为：{1}"
                 , userId, Constant.onlineUserMap.size()));
     }
-
+    //查找Constant.onlineUserMap中不同用户的把ChannelHandlerContext，去判断发送给哪个用户消息
     @Override
     public void singleSend(JSONObject param, ChannelHandlerContext ctx) {
         String fromUserId = (String)param.get("fromUserId");

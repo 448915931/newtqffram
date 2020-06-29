@@ -6,6 +6,7 @@ import com.tqfframe.nettychat.web.websocket.WebSocketServer;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -18,11 +19,15 @@ public class ApplicationConfig implements WebMvcConfigurer {
 
     @Resource(name = "webSocketChildChannelHandler")
     private WebSocketChildChannelHandler webSocketChildChannelHandler;
+    //netty端口
+    @Value(value = "${netty.chat.port}")
+    private int port;
 
+    //注入WebSocketServer
     @Bean
     public WebSocketServer getWebSocketServer() {
         WebSocketServer webSocketServer = new WebSocketServer();
-        webSocketServer.setPort(3333);
+        webSocketServer.setPort(port);
         webSocketServer.setChildChannelHandler(webSocketChildChannelHandler);
         return webSocketServer;
     }

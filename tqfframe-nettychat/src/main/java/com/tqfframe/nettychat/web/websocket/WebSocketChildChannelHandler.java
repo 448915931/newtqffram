@@ -25,6 +25,7 @@ public class WebSocketChildChannelHandler extends ChannelInitializer<SocketChann
 		ch.pipeline().addLast("aggregator", new HttpObjectAggregator(65536)); // 把HTTP头、HTTP体拼成完整的HTTP请求
 		ch.pipeline().addLast("http-chunked", new ChunkedWriteHandler()); // 方便大文件传输，不过实质上都是短的文本数据
 		ch.pipeline().addLast("http-handler", httpRequestHandler);
+		////重要！！！此处一定要配置成异步执行类
 		ch.pipeline().addLast("websocket-handler",webSocketServerHandler);
 	}
 

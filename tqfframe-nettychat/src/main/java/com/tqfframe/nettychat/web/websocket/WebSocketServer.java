@@ -12,25 +12,28 @@ import org.springframework.beans.factory.annotation.Qualifier;
 /**
  * 描述: Netty WebSocket服务器
  *      使用独立的线程启动
- * @author Kanarien 
+ * @author tangqifeng
  * @version 1.0
- * @date 2018年5月18日 上午11:22:51
  */
 public class WebSocketServer implements Runnable{
 
     private final Logger logger = LoggerFactory.getLogger(WebSocketServer.class);
-    
+
+	// 这2个group都是死循环，阻塞式
 	@Autowired
 	@Qualifier("bossGroup")
 	private EventLoopGroup bossGroup;
 	@Autowired
 	@Qualifier("workerGroup")
 	private EventLoopGroup workerGroup;
+	// 创建一个ServerBootstrap 实例用来配置启动Netty服务器
 	@Autowired
 	private ServerBootstrap serverBootstrap;
-	
+	//netty服务器端口
 	private int port;
+	//要被调用的channelHandler,也就是异步请求后的执行方法需要通过这个去定义（主要的接口）
 	private ChannelHandler childChannelHandler;
+	//用于绑定服务的端口，启动netty服务。
 	private ChannelFuture serverChannelFuture;
 	
 	public WebSocketServer() {
