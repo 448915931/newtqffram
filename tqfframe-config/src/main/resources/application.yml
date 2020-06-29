@@ -23,7 +23,7 @@ spring:
             label: master
             server:
                 git:
-                    password: tang4810291
+                    password: tangqifeng481
                     # tqfframe-config-yaml/test表示
                     # https://github.com/448915931/newtqffram/tqfframe-config-yaml/test
 #                    searchPaths: tqfframe-config-yaml/product
