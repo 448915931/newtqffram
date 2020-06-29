@@ -1,0 +1,37 @@
+#注册进服务中心，这个配置不能放入config配置中心中，不然不能注册进服务中心！！！！
+eureka:
+  client:
+    serviceUrl:
+#      defaultZone: http://172.17.0.2:9003/eureka/
+      defaultZone: http://localhost:9003/eureka/
+#显示版本号信息，服务器ip地址和端口
+  instance:
+    prefer-ip-address: true
+    hostname: ${spring.cloud.client.ip-address}
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+
+spring:
+    sleuth:
+       zuul:
+          enabled: true
+    application:
+      name: tqfframe-nettychat
+    cloud:
+        config:
+            name: application,${spring.application.name}
+            fail-fast: true
+            profile: dev
+            label: master
+            retry:
+                initial-interval: 2000
+                max-interval: 10000
+                multiplier: 2
+                max-attempts: 10
+            enabled: true
+            discovery:
+                enabled: true
+                ##这个一定要填对
+                service-id: tqfframe-config
+
