@@ -35,6 +35,8 @@ spring:
                 ##这个一定要填对
                 service-id: tqfframe-config
 
+tang: 1
+
 feign:
   hystrix:
     enabled: true

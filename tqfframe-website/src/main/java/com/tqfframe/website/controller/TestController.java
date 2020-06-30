@@ -3,6 +3,7 @@ import com.tqfframe.website.client.UserClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -15,6 +16,9 @@ public class TestController {
 
     @Autowired
     private UserClient userClient;
+
+    @Value(value = "${tang}")
+    private String tang;
 
     /**
      *  本地
@@ -33,6 +37,7 @@ public class TestController {
         logger.info(name);
         logger.debug(name);
         logger.error(name);
+        logger.info(tang);
         //调用user服务接口
         return  userClient.testhystrix(name);
     }
