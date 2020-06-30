@@ -9,4 +9,4 @@ spring:
     password: 123456
 
 
-tang: 3
+#tang: 3
