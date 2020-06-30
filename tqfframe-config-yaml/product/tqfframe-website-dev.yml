@@ -8,14 +8,3 @@ spring:
     username: tangqifeng
     password: 123456
 
-feign:
-  hystrix:
-    enabled: true
-
-#  在被监控的服务上添加暴露点
-management:
-  endpoints:
-    web:
-      exposure:
-        include: hystrix.stream
-#       include: '*'   #'*'代表开放所有端点。

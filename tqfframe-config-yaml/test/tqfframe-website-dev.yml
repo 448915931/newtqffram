@@ -7,15 +7,3 @@ spring:
     url: jdbc:mysql://192.168.47.137:3306/testDB?characterEncoding=utf-8&useSSL=false&autoReconnect=true
     username: tangqifeng
     password: 123456
-
-feign:
-  hystrix:
-    enabled: true
-
-#  在被监控的服务上添加暴露点
-management:
-  endpoints:
-    web:
-      exposure:
-        include: hystrix.stream
-#       include: '*'   #'*'代表开放所有端点。
