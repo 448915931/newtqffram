@@ -16,8 +16,6 @@ spring:
     sleuth:
        zuul:
           enabled: true
-    application:
-      name: tqfframe-website
     cloud:
         config:
             name: application,${spring.application.name}
