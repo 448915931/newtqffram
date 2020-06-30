@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.tqfframe</groupId>
-    <artifactId>tqfframe-user</artifactId>
+    <artifactId>tqfframe-app</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <description>全平台用户服务</description>
+    <description>app接口服务</description>
 
     <parent>
         <artifactId>server</artifactId>
@@ -37,7 +37,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
-
+        <!--微服务之间调用feign-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
         <!-- springboot提供的actuator监控，如果配置了EnableHystrixDashboard服务，需要添加下面2个依赖才能监控这个服务 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -80,13 +84,21 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>com.tqfframe.user.UserApplicationApp</mainClass>
+                    <mainClass>com.tqfframe.app.WebApplicationApp</mainClass>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
                 <version>2.5.3</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>6</source>
+                    <target>6</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>

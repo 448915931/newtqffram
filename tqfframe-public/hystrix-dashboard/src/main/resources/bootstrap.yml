@@ -35,8 +35,11 @@ spring:
                 ##这个一定要填对
                 service-id: tqfframe-config
 
-
-# turbine监控多个微服务配置
-#turbine:
-#  app-config: tqfframe-website,tqfframe-zuul
-#  cluster-name-expression: new String("default")
+turbine:
+  # 监控的应用名称，多个以逗号隔开
+  app-config: tqfframe-website,tqfframe-user
+  aggregator:
+    # 指定聚合哪些集群，默认为 default
+    clusterConfig: default
+  # 指定集群名称为 default
+  clusterNameExpression: new String("default")
