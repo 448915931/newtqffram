@@ -35,3 +35,8 @@ spring:
                 ##这个一定要填对
                 service-id: tqfframe-config
 
+
+# turbine监控多个微服务配置
+#turbine:
+#  app-config: tqfframe-website,tqfframe-zuul
+#  cluster-name-expression: new String("default")
