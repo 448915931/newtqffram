@@ -11,7 +11,6 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  */
 @EnableEurekaClient
 @SpringBootApplication
-@EnableCircuitBreaker //Hystrix仪表盘 服务熔断（ribbon 单服务实例监控）
 public class UserApplicationApp
 {
     public static void main( String[] args )

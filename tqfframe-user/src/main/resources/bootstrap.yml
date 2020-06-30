@@ -35,14 +35,3 @@ spring:
                 ##这个一定要填对
                 service-id: tqfframe-config
 
-feign:
-  hystrix:
-    enabled: true
-
-#  在被监控的服务上添加暴露点
-management:
-  endpoints:
-    web:
-      exposure:
-        include: hystrix.stream
-#       include: '*'   #'*'代表开放所有端点。
