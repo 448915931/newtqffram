@@ -14,7 +14,7 @@
 
     <properties>
         <spring.boot.main.version>2.0.3.RELEASE</spring.boot.main.version>
-        <mysql.version>8.0.11</mysql.version>
+        <mysql.version>8.0.16</mysql.version>
         <mybatis.plus.baomidou.version>3.0.5</mybatis.plus.baomidou.version>
         <com.alibaba.fastjson.version>1.2.47</com.alibaba.fastjson.version>
         <netty.version>4.1.1.Final</netty.version>
