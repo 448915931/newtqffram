@@ -1,0 +1,8 @@
+#spring:
+#    cloud:
+#       #开启消息跟踪
+#       bus:
+#         trace:
+#            enabled: true
+
+tang: 2

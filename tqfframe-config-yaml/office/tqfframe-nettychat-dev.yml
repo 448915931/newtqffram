@@ -1,0 +1,16 @@
+server:
+  port: 9004
+spring:
+  application:
+    name: tqfframe-nettychat
+#  datasource:
+#    url: jdbc:mysql://192.168.47.137:3306/testDB?characterEncoding=utf-8&useSSL=false&autoReconnect=true
+#    username: tangqifeng
+#    password: 123456
+
+# netty服务端口
+netty:
+  chat:
+    port: 3333
+
+
