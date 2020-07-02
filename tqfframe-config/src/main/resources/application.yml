@@ -27,7 +27,7 @@ spring:
                     # tqfframe-config-yaml/test表示
                     # https://github.com/448915931/newtqffram/tqfframe-config-yaml/test
 #                    searchPaths: tqfframe-config-yaml/product
-                    searchPaths: tqfframe-config-yaml/test
+                    searchPaths: tqfframe-config-yaml/office
                     #使用远程git仓库的配置文件
                     uri: https://github.com/448915931/newtqffram.git
                     username: 448915931

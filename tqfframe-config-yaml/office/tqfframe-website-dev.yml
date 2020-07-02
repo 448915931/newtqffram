@@ -4,7 +4,7 @@ spring:
   application:
     name: tqfframe-website
   datasource:
-    url: jdbc:mysql://192.168.47.137:3306/testDB?characterEncoding=utf-8&useSSL=false&autoReconnect=true
+    url: jdbc:mysql://localhost:3306/testdb?characterEncoding=utf-8&useSSL=false&autoReconnect=true
     username: tangqifeng
     password: 123456
 
