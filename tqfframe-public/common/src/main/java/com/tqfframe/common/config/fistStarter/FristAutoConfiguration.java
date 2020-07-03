@@ -13,15 +13,8 @@ import org.springframework.context.annotation.Configuration;
 @EnableConfigurationProperties({FristProperties.class})
 public class FristAutoConfiguration {
 
-    private final FristProperties fristProperties;
-
-    public FristAutoConfiguration(FristProperties fristProperties){
-        this.fristProperties=fristProperties;
-    }
-
-
     @Bean
-    public TestDomain getValue(){
+    public TestDomain testDomain(FristProperties fristProperties){
         return new TestDomain( fristProperties.getTestdata(), fristProperties.getTestdata1());
     }
 
