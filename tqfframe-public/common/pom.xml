@@ -7,6 +7,25 @@
     <groupId>com.tqfframe</groupId>
     <artifactId>common</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <description>公共服务</description>
 
-    
+    <parent>
+        <artifactId>server</artifactId>
+        <groupId>com.tqfframe</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <dependencies>
+        <!--spring-boot-starter-web包含了spring-boot-starter-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
 </project>

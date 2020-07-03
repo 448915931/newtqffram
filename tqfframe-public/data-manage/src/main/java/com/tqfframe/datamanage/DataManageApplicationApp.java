@@ -1,5 +1,6 @@
 package com.tqfframe.datamanage;
 
+import com.tqfframe.common.annotation.EnableFirstStarter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -11,6 +12,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  */
 @SpringBootApplication
 @EnableEurekaClient
+@EnableFirstStarter   //自己写的第一个starter
 public class DataManageApplicationApp {
     public static void main(String[] args){
         SpringApplication.run(DataManageApplicationApp.class,args);

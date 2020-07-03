@@ -35,4 +35,8 @@ spring:
                 ##这个一定要填对
                 service-id: tqfframe-config
 
+tqf-plus:
+  testdata: 111
+  testdata1: 222
+  testdata2: 333
 
