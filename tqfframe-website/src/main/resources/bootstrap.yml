@@ -35,6 +35,18 @@ spring:
                 ##这个一定要填对
                 service-id: tqfframe-config
 
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  global-config:
+    # 关闭MP3.0自带的banner
+    banner: false
+    db-config:
+      # 默认数据库表下划线命名
+      table-underline: true
+ #打印sql
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
 tang: 1
 
 feign:
