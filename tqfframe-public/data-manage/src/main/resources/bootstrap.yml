@@ -35,6 +35,23 @@ spring:
                 ##这个一定要填对
                 service-id: tqfframe-config
 
+
+feign:
+  hystrix:
+    enabled: true
+
+#ribbon:
+#    ServerListRefreshInterval: 1000
+#    # 连接超时时间5秒
+#    ConnectTimeout: 2000
+#    # 访问超时时间5秒,注意与hystrix线程池的超时时间进行协调(测试环境可适当调小以便于问题暴露及早出来)
+#    ReadTimeout: 2000
+##    OkToRetryOnAllOperations: false
+##    MaxAutoRetriesNextServer: 3
+##    MaxAutoRetries: 2
+#  #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.AvailabilityFilteringRule
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule
+
 tqf-plus:
   testdata: 111
   testdata1: 222

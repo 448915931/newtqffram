@@ -4,6 +4,7 @@ import com.tqfframe.common.annotation.EnableFirstStarter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * @Author: 唐祺峰
@@ -12,6 +13,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  */
 @SpringBootApplication
 @EnableEurekaClient
+@EnableFeignClients
 @EnableFirstStarter   //自己写的第一个starter
 public class DataManageApplicationApp {
     public static void main(String[] args){
